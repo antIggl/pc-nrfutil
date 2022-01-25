@@ -36,3 +36,6 @@
 #
 
 """Package implementing Zigbee OTA DFU functionality."""
+from . import pynrfutil
+
+__all__=[pynrfutil]
