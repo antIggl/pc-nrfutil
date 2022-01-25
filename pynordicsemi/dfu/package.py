@@ -49,12 +49,12 @@ import hashlib
 
 
 # Nordic libraries
-from nordicsemi.dfu.nrfhex import nRFHex
-from nordicsemi.dfu.init_packet_pb import InitPacketPB, DFUType, CommandTypes, ValidationTypes, SigningTypes, HashTypes
-from nordicsemi.dfu.manifest import ManifestGenerator, Manifest
-from nordicsemi.dfu.model import HexType, FirmwareKeys
-from nordicsemi.dfu.crc16 import calc_crc16
-from nordicsemi.zigbee.ota_file import OTA_file
+from pynordicsemi.dfu.nrfhex import nRFHex
+from pynordicsemi.dfu.init_packet_pb import InitPacketPB, DFUType, CommandTypes, ValidationTypes, SigningTypes, HashTypes
+from pynordicsemi.dfu.manifest import ManifestGenerator, Manifest
+from pynordicsemi.dfu.model import HexType, FirmwareKeys
+from pynordicsemi.dfu.crc16 import calc_crc16
+from pynordicsemi.zigbee.ota_file import OTA_file
 
 from .signing import Signing
 

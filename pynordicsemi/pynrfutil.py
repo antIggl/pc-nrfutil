@@ -46,16 +46,16 @@ import logging
 import re
 sys.path.append(os.getcwd())
 
-from nordicsemi.dfu.bl_dfu_sett import BLDFUSettings
-from nordicsemi.dfu.dfu import Dfu
-from nordicsemi.dfu.dfu_transport import DfuEvent, TRANSPORT_LOGGING_LEVEL
-from nordicsemi.dfu.dfu_transport_serial import DfuTransportSerial
-from nordicsemi.dfu.package import Package
-from nordicsemi import version as nrfutil_version
-from nordicsemi.dfu.signing import Signing
-from nordicsemi.zigbee.prod_config import ProductionConfig, ProductionConfigWrongException, ProductionConfigTooLargeException
+from pynordicsemi.dfu.bl_dfu_sett import BLDFUSettings
+from pynordicsemi.dfu.dfu import Dfu
+from pynordicsemi.dfu.dfu_transport import DfuEvent, TRANSPORT_LOGGING_LEVEL
+from pynordicsemi.dfu.dfu_transport_serial import DfuTransportSerial
+from pynordicsemi.dfu.package import Package
+from pynordicsemi import version as nrfutil_version
+from pynordicsemi.dfu.signing import Signing
+from pynordicsemi.zigbee.prod_config import ProductionConfig, ProductionConfigWrongException, ProductionConfigTooLargeException
 from pc_ble_driver_py.exceptions import NordicSemiException
-from nordicsemi.lister.device_lister import DeviceLister
+from pynordicsemi.lister.device_lister import DeviceLister
 import spinel.util as util
 
 logger = logging.getLogger(__name__)

@@ -40,7 +40,7 @@ import json
 import os
 
 # Nordic libraries
-from nordicsemi.dfu.model import HexType, FirmwareKeys
+from pynordicsemi.dfu.model import HexType, FirmwareKeys
 
 
 class ManifestGenerator:

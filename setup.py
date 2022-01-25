@@ -48,7 +48,7 @@ import sys
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-from nordicsemi import version
+from pynordicsemi import version
 
 # Change directory to be able to run python setup.py develop from another directory
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
@@ -101,7 +101,7 @@ excludes = ["Tkconstants",
             "pyreadline"]
 
 # DFU component cli interface
-includes = ["nordicsemi.dfu.dfu"]
+includes = ["pynordicsemi.dfu.dfu"]
 
 packages = []
 
@@ -117,7 +117,7 @@ dll_excludes = [
     "GDI32.DLL"]
 
 build_dir = os.environ.get("NRFUTIL_BUILD_DIR", "./{}".format(version.NRFUTIL_VERSION))
-description = """A Python package that includes the nrfutil utility and the nordicsemi library"""
+description = """A Python package that includes the nrfutil utility, the nordicsemi library and the pynrfutil module"""
 
 with open("requirements.txt") as reqs_file:
     reqs = reqs_file.readlines()
@@ -135,12 +135,12 @@ class NoseTestCommand(TestCommand):
 
 
 setup(
-    name="nrfutil",
+    name="pynrfutil",
     version=version.NRFUTIL_VERSION,
     license="Other/Proprietary License",
-    author="Nordic Semiconductor ASA",
-    url="https://github.com/NordicSemiconductor/pc-nrfutil",
-    description="Nordic Semiconductor nrfutil utility and Python library",
+    author="Antonios Inglezakis",
+    url="https://github.com/antIggl/pc-nrfutil",
+    description="Nordic Semiconductor nrfutil utility and Python library slightly revised. Added pynrfutil submodule with the same implemneted methods of nrfutil CLI",
     long_description=description,
     packages=find_packages(exclude=["tests.*", "tests"]),
     package_data={
@@ -175,16 +175,16 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
-    keywords='nordic nrf51 nrf52 ble bluetooth dfu ota softdevice serialization nrfutil pc-nrfutil',
+    keywords='nordic nrf51 nrf52 ble bluetooth dfu ota softdevice serialization nrfutil pc-nrfutil pynrfutil',
     cmdclass={
         'test': NoseTestCommand
     },
     entry_points='''
       [console_scripts]
-      nrfutil = nordicsemi.__main__:cli
+      pynrfutil = pynordicsemi.__main__:cli
     ''',
     console=[{
-        "script": "./nordicsemi/__main__.py",
-        "dest_base": "nrfutil"
+        "script": "./pynordicsemi/__main__.py",
+        "dest_base": "pynrfutil"
     }],
 )

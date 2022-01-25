@@ -47,10 +47,10 @@ from serial import Serial
 from serial.serialutil import SerialException
 
 # Nordic Semiconductor imports
-from nordicsemi.dfu.dfu_transport   import DfuTransport, DfuEvent, TRANSPORT_LOGGING_LEVEL
+from pynordicsemi.dfu.dfu_transport   import DfuTransport, DfuEvent, TRANSPORT_LOGGING_LEVEL
 from pc_ble_driver_py.exceptions    import NordicSemiException
-from nordicsemi.lister.device_lister import DeviceLister
-from nordicsemi.dfu.dfu_trigger import DFUTrigger
+from pynordicsemi.lister.device_lister import DeviceLister
+from pynordicsemi.dfu.dfu_trigger import DFUTrigger
 
 class ValidationException(NordicSemiException):
     """"

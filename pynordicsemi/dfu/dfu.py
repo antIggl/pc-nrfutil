@@ -44,7 +44,7 @@ import tempfile
 
 
 # Nordic libraries
-from nordicsemi.dfu.package         import Package
+from pynordicsemi.dfu.package         import Package
 
 logger = logging.getLogger(__name__)
 

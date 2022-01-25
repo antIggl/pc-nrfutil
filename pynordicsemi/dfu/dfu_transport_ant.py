@@ -54,7 +54,7 @@ except ImportError as e:
     raise Exception("Try running 'pip install antlib'.")
 
 # Nordic Semiconductor imports
-from nordicsemi.dfu.dfu_transport   import DfuTransport, DfuEvent, TRANSPORT_LOGGING_LEVEL
+from pynordicsemi.dfu.dfu_transport   import DfuTransport, DfuEvent, TRANSPORT_LOGGING_LEVEL
 from pc_ble_driver_py.exceptions    import NordicSemiException
 
 
