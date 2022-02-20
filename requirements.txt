@@ -1,9 +1,8 @@
+intelhex==2.3.0
 antlib >= 1.1b0; sys_platform == 'win32'
 click
 crcmod
 ecdsa
-nrfutil
-intelhex
 libusb1==1.9.3
 pc_ble_driver_py >= 0.16.1
 piccata
